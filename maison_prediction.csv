@@ -1,97 +1,75 @@
-Emplacement,Age,Chambre,Cloture,Parking,Niveau,Prix
-virunga,10,4,oui,oui,étage,150000
-volcan,25,3,oui,non,rez-de-chaussée,320000
-afia,12,2,non,non,rez-de-chaussée,120000
-centre ville,30,6,oui,oui,étage,400000
-majengo,8,3,oui,non,étage,140000
-mugunga,5,2,non,oui,rez-de-chaussée,110000
-virunga,18,4,oui,non,étage,160000
-volcan,22,5,non,oui,rez-de-chaussée,310000
-afia,15,3,oui,oui,étage,125000
-centre ville,28,4,non,non,rez-de-chaussée,410000
-majengo,20,3,oui,oui,étage,135000
-mugunga,3,1,non,non,rez-de-chaussée,100000
-virunga,14,5,oui,non,étage,150000
-volcan,35,6,non,oui,étage,330000
-afia,6,2,oui,non,rez-de-chaussée,120000
-centre ville,40,7,oui,oui,étage,420000
-majengo,9,3,oui,non,rez-de-chaussée,140000
-mugunga,17,4,non,oui,étage,110000
-virunga,11,5,oui,oui,étage,160000
-volcan,16,2,non,non,rez-de-chaussée,300000
-afia,7,4,oui,oui,étage,125000
-centre ville,23,3,oui,non,étage,390000
-majengo,2,1,non,oui,rez-de-chaussée,110000
-mugunga,13,2,oui,non,rez-de-chaussée,105000
-virunga,26,4,oui,oui,étage,150000
-volcan,31,3,non,non,rez-de-chaussée,340000
-afia,19,5,oui,non,étage,130000
-centre ville,4,2,non,oui,rez-de-chaussée,380000
-majengo,21,4,oui,oui,étage,145000
-mugunga,29,6,non,non,rez-de-chaussée,105000
-virunga,12,3,oui,oui,étage,150000
-volcan,14,2,oui,non,rez-de-chaussée,305000
-afia,33,4,non,oui,étage,135000
-centre ville,37,5,oui,oui,étage,415000
-majengo,6,3,non,non,rez-de-chaussée,120000
-mugunga,24,2,oui,non,étage,110000
-virunga,18,3,oui,oui,rez-de-chaussée,150000
-volcan,15,4,non,oui,étage,310000
-afia,8,5,oui,non,rez-de-chaussée,130000
-centre ville,20,4,oui,oui,étage,400000
-majengo,11,2,oui,non,rez-de-chaussée,120000
-mugunga,27,4,non,oui,étage,105000
-virunga,10,3,oui,non,étage,145000
-volcan,9,2,oui,oui,rez-de-chaussée,300000
-afia,22,5,non,non,étage,135000
-centre ville,16,3,oui,oui,rez-de-chaussée,385000
-majengo,5,2,non,oui,étage,120000
-mugunga,17,4,oui,non,étage,105000
-virunga,13,3,oui,oui,rez-de-chaussée,150000
-volcan,7,2,non,non,étage,300000
-afia,19,5,oui,oui,étage,130000
-centre ville,35,6,oui,non,rez-de-chaussée,410000
-majengo,28,4,oui,oui,étage,140000
-mugunga,21,3,non,non,rez-de-chaussée,105000
-virunga,14,4,oui,oui,étage,150000
-volcan,30,5,oui,non,étage,320000
-afia,32,3,non,oui,rez-de-chaussée,135000
-centre ville,25,2,oui,non,rez-de-chaussée,390000
-majengo,18,4,oui,oui,étage,135000
-mugunga,12,3,non,oui,rez-de-chaussée,105000
-virunga,7,4,oui,non,étage,145000
-volcan,9,3,oui,oui,rez-de-chaussée,310000
-afia,26,2,non,oui,étage,130000
-centre ville,19,4,oui,oui,étage,400000
-majengo,15,3,oui,non,rez-de-chaussée,130000
-mugunga,20,2,non,oui,étage,110000
-virunga,28,4,oui,oui,étage,150000
-volcan,11,3,non,non,rez-de-chaussée,300000
-afia,24,5,oui,non,étage,135000
-centre ville,17,3,oui,oui,rez-de-chaussée,380000
-majengo,10,2,oui,non,étage,120000
-mugunga,5,1,non,oui,rez-de-chaussée,100000
-virunga,12,4,oui,oui,étage,150000
-volcan,6,3,non,non,rez-de-chaussée,305000
-afia,15,2,oui,non,étage,130000
-centre ville,22,4,oui,oui,étage,400000
-majengo,20,3,non,non,rez-de-chaussée,130000
-mugunga,14,4,oui,oui,étage,110000
-virunga,3,2,non,oui,rez-de-chaussée,100000
-volcan,17,3,oui,non,étage,310000
-afia,8,1,oui,oui,étage,120000
-centre ville,5,2,non,non,rez-de-chaussée,390000
-majengo,6,4,oui,non,étage,120000
-mugunga,9,3,non,oui,étage,110000
-virunga,7,4,oui,non,étage,150000
-volcan,12,5,non,oui,rez-de-chaussée,320000
-afia,19,3,oui,oui,étage,130000
-centre ville,10,4,non,non,étage,395000
-majengo,11,3,oui,oui,rez-de-chaussée,125000
-mugunga,15,2,oui,non,étage,110000
-virunga,23,4,oui,oui,étage,155000
-volcan,30,3,non,oui,rez-de-chaussée,335000
-afia,13,2,oui,non,étage,130000
-centre ville,8,4,oui,oui,rez-de-chaussée,400000
-majengo,12,3,non,oui,étage,130000
-mugunga,14,4,oui,oui,rez-de-chaussée,110000
+Emplacement,Chambres,Salle de Bain,Salons,Cuisine,Parking,Clôture,Matériaux,Électricité,Eau,Documents,Âge Maison,Niveau,Positionnement,Prix
+centre ville,4,3,1,interne,True,True,briques,True,True,False,6,étage,en route principale,120000
+virunga,6,1,2,externe,True,True,bois,True,False,False,8,étage,pas en route principale,80200
+keshyero,2,2,2,interne,False,False,bois,False,True,True,6,rez de chaussée,en route principale,16140
+centre ville,3,4,1,interne,True,True,briques,True,False,True,9,étage,pas en route principale,200700
+himbi 1,5,2,1,externe,True,True,briques,True,True,True,1,étage,pas en route principale,70500
+centre ville,3,1,1,interne,True,True,briques,False,True,True,10,rez de chaussée,pas en route principale,291500
+murara,1,3,2,interne,False,True,bois,True,False,False,5,rez de chaussée,en route principale,12600
+centre ville,5,4,2,interne,True,True,béton,True,True,True,4,rez de chaussée,pas en route principale,76000
+virunga,4,1,1,externe,False,True,bois,True,False,True,9,rez de chaussée,pas en route principale,13440
+majengo,6,2,2,interne,True,True,briques,True,True,False,2,étage,pas en route principale,84000
+centre ville,2,3,1,externe,True,True,bois,True,True,True,5,étage,pas en route principale,42500
+mugunga,5,3,2,interne,False,True,béton,False,False,False,7,étage,en route principale,78000
+centre ville,1,2,2,interne,True,False,briques,False,True,True,7,rez de chaussée,en route principale,73000
+himbi 1,2,2,1,interne,False,False,briques,True,False,False,6,rez de chaussée,en route principale,39150
+centre ville,4,4,2,interne,True,True,bois,True,True,True,3,étage,pas en route principale,89600
+centre ville,2,2,2,externe,True,True,briques,False,False,True,4,étage,en route principale,319200
+centre ville,5,4,1,externe,False,False,bois,True,False,True,2,étage,pas en route principale,70000
+centre ville,3,1,2,interne,False,True,briques,True,False,True,2,étage,pas en route principale,174000
+murara,3,2,1,externe,False,True,bois,False,False,True,3,rez de chaussée,en route principale,13650
+de volcan,1,4,2,interne,True,False,bois,True,False,False,3,étage,pas en route principale,92000
+centre ville,6,3,1,interne,True,True,bois,False,True,True,5,étage,pas en route principale,79600
+centre ville,2,3,1,interne,True,False,briques,False,True,True,2,étage,en route principale,144000
+de volcan,3,2,1,interne,True,False,bois,True,False,True,2,rez de chaussée,pas en route principale,54000
+majengo,5,2,2,interne,False,False,briques,True,False,True,8,étage,pas en route principale,34000
+centre ville,1,3,1,externe,True,True,bois,False,False,True,6,rez de chaussée,pas en route principale,276000
+majengo,4,4,1,externe,False,False,bois,False,False,True,8,étage,pas en route principale,49200
+murara,4,2,1,externe,True,False,bois,True,False,True,8,étage,pas en route principale,83160
+murara,4,3,2,interne,True,False,briques,True,True,True,5,étage,pas en route principale,74800
+centre ville,3,2,2,externe,True,True,bois,False,True,False,1,étage,pas en route principale,372000
+virunga,2,2,2,interne,False,True,briques,True,False,False,2,étage,pas en route principale,295800
+centre ville,1,2,1,externe,False,True,bois,False,True,False,3,rez de chaussée,pas en route principale,243000
+centre ville,2,4,2,interne,False,True,briques,True,False,False,8,étage,en route principale,99600
+centre ville,5,1,2,externe,True,True,briques,False,True,True,5,étage,en route principale,91000
+centre ville,4,2,1,interne,True,False,briques,False,False,False,3,étage,pas en route principale,70000
+de volcan,3,2,1,interne,False,False,briques,True,True,False,6,rez de chaussée,en route principale,88000
+de volcan,2,3,2,interne,False,True,briques,True,True,True,3,rez de chaussée,en route principale,55000
+ndosho,3,1,2,interne,True,True,bois,True,False,False,4,rez de chaussée,pas en route principale,15200
+centre ville,1,3,1,interne,False,True,bois,True,True,True,1,étage,pas en route principale,285000
+centre ville,6,3,2,interne,True,False,béton,False,True,True,10,étage,pas en route principale,871200
+centre ville,2,1,1,externe,False,True,briques,True,True,True,3,étage,pas en route principale,97000
+murara,4,2,2,interne,True,True,bois,False,True,True,3,étage,pas en route principale,78800
+murara,1,1,2,interne,False,True,briques,False,False,True,5,rez de chaussée,pas en route principale,101000
+centre ville,2,2,1,interne,False,False,bois,False,True,True,7,rez de chaussée,en route principale,48000
+ndosho,4,4,2,interne,True,True,bois,True,True,True,8,rez de chaussée,en route principale,44000
+centre ville,2,3,1,externe,False,True,briques,True,False,True,9,étage,pas en route principale,59600
+centre ville,5,3,2,interne,False,True,briques,False,False,True,3,étage,pas en route principale,89400
+ndosho,4,2,2,interne,False,True,bois,True,False,True,4,étage,pas en route principale,70600
+murara,1,1,2,externe,True,True,briques,True,False,False,3,rez de chaussée,pas en route principale,70000
+murara,2,3,1,interne,False,False,briques,True,True,False,9,rez de chaussée,en route principale,33600
+centre ville,4,1,2,interne,False,True,bois,True,False,True,7,étage,en route principale,82800
+centre ville,3,3,1,externe,False,True,bois,False,True,True,5,étage,pas en route principale,86400
+majengo,2,1,1,externe,False,True,bois,True,True,False,8,rez de chaussée,pas en route principale,31200
+murara,5,3,2,interne,True,True,briques,True,False,False,10,étage,pas en route principale,83600
+centre ville,1,2,2,interne,True,True,bois,True,True,False,2,rez de chaussée,pas en route principale,42000
+centre ville,4,3,1,interne,True,True,bois,True,False,False,1,étage,pas en route principale,92000
+ndosho,2,1,2,interne,False,False,bois,True,False,True,8,étage,pas en route principale,44000
+ndosho,5,3,1,interne,True,True,bois,True,False,True,5,étage,pas en route principale,40000
+centre ville,3,3,2,interne,False,True,briques,True,False,False,7,rez de chaussée,pas en route principale,88000
+de volcan,4,3,1,externe,True,True,briques,False,False,True,6,étage,en route principale,110000
+centre ville,1,4,2,interne,False,True,bois,False,True,True,3,rez de chaussée,route principale,70000
+centre ville,3,1,2,externe,False,False,bois,False,True,False,8,rez de chaussée,pas en route principale,40000
+centre ville,2,1,1,externe,True,False,briques,True,True,True,5,rez de chaussée,pas en route principale,60000
+centre ville,4,4,2,interne,False,True,bois,True,False,True,2,étage,pas en route principale,732000
+centre ville,1,3,1,externe,False,False,briques,False,True,True,7,rez de chaussée,en route principale,297000
+centre ville,3,2,1,interne,False,True,bois,True,False,False,1,rez de chaussée,pas en route principale,60000
+majengo,2,4,2,interne,True,False,briques,True,True,True,8,étage,en route principale,61000
+virunga,4,3,2,interne,True,False,bois,True,True,True,7,étage,pas en route principale,28000
+virunga,1,2,1,interne,False,False,bois,True,True,False,2,rez de chaussée,pas en route principale,31000
+majengo,2,2,2,interne,False,True,bois,True,False,True,7,étage,pas en route principale,35000
+centre ville,3,4,2,interne,True,True,bois,False,False,True,2,rez de chaussée,pas en route principale,82600
+centre ville,1,1,1,externe,False,True,briques,False,True,True,3,rez de chaussée,pas en route principale,188000
+murara,2,2,1,interne,False,True,briques,True,True,True,4,rez de chaussée,pas en route principale,44000
+centre ville,5,2,2,interne,False,False,bois,False,False,False,9,rez de chaussée,pas en route principale,20000
+murara,4,3,2,interne,True,False,bois,False,False,True,5,étage,pas en route principale,19600

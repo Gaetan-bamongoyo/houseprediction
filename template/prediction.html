@@ -1,137 +1,465 @@
-{% extends 'structure.html' %}
 {% load static %}
-{% block content %}
-<div class="inner-page-banner">
-    <div class="banner-wrapper">
-        <div class="container-fluid">
-            <div class="banner-main-content-wrap">
-                <div class="row">
-                    <div class="col-xl-6 col-lg-7 d-flex align-items-center">
-                        <div class="banner-content">
-                            <h1>Checkout Page</h1>
-                            <ul class="breadcrumb-list">
-                                <li><a href="index.html">Home</a></li>
-                                <li>Checkout </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Start Pricing check-out section -->
-<div class="pricing-checkout-page pt-100 mb-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-4 p-0">
-                <div class="package-pricing-area">
-                    <div class="package-title">
-                        <h6>Resultat de la prédiction</h6>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8 p-0">
-                <div class="details-form">
-                    <div class="details-form-title">
-                        <h4>Les informations de votre maison</h4>
-                    </div>
-                    <form id="house-form" method="post" action="{% url 'predictiontest' %}">
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-md-6 mb-30">
-                                <div class="form-inner">
-                                    <label>Emplacement*</label>
-                                    <select name="emplacement">
-                                        <option value="afia">Afia</option>
-                                        <option value="majengo">Majengo</option>
-                                        <option value="volcan">Volcan</option>
-                                        <option value="virunga">Virunga</option>
-                                        <option value="centre ville">Centre ville</option>
-                                        <option value="mugunga">Mugunga</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-30">
-                                <div class="form-inner">
-                                    <label>Cloture*</label>
-                                    <select name="cloture">
-                                        <option value="oui">Oui</option>
-                                        <option value="non">Non</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-30">
-                                <div class="form-inner">
-                                    <label>Parking*</label>
-                                    <select name="parking">
-                                        <option value="oui">Oui</option>
-                                        <option value="non">Non</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-30">
-                                <div class="form-inner">
-                                    <label>Niveau*</label>
-                                    <select name="niveau">
-                                        <option value="rez-de-chaussée">Rez-de-chaussée</option>
-                                        <option value="étage">Etage</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-30">
-                                <div class="form-inner">
-                                    <label>Age de la maison*</label>
-                                    <input type="number" name="age" placeholder="">
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-30">
-                                <div class="form-inner">
-                                    <label>Nombre de chambre*</label>
-                                    <input type="number" name="chambre" placeholder="">
-                                </div>
-                            </div>
-                            <div class="post-property-btn">
-                                <button type="submit" class="primary-btn3">
-                                    Predire
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                    <div id="resultat-prediction" style="margin-top:20px;"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Pricing check-out section -->
-<script>
-    document.getElementById('house-form').addEventListener('submit', function (e) {
-        e.preventDefault();
-        const form = e.target;
-        const formData = new FormData(form);
-        fetch(form.action, {
-            method: 'POST',
-            headers: {
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
-            },
-            body: formData
-        })
-            .then(response => response.json())
-            .then(data => {
-                if (data.prix !== undefined) {
-                    document.getElementById('resultat-prediction').innerHTML = '<h4>Prix prédit : $ ' + Number(data.prix).toFixed(2) + '</h4>';
-                } else if (data.error) {
-                    document.getElementById('resultat-prediction').innerHTML = '<span style="color:red">' + data.error + '</span>';
-                } else {
-                    document.getElementById('resultat-prediction').innerHTML = '<span style="color:red">Erreur lors de la prédiction.</span>';
-                }
-            })
-            .catch(error => {
-                document.getElementById('resultat-prediction').innerHTML = '<span style="color:red">Erreur lors de la prédiction.</span>';
-            });
-    });
-</script>
+<!DOCTYPE html>
+<html lang="fr">
 
-{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page GOMA</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: url('../../../GOMA2.webp') center/cover no-repeat;
+            color: #fff;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links li a:hover {
+            color: #ffd700;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 80vh;
+            padding: 3rem 1rem;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 80vh;
+            padding: 3rem 1rem;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .form-container {
+            flex: 1;
+            padding: 2.5rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #222;
+            text-align: center;
+        }
+
+        .form-container form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 1.2rem;
+        }
+
+        .form-row .form-group {
+            flex: 1 1 0;
+            min-width: 0;
+        }
+
+        .form-row:last-of-type {
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 0.7rem 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-family: 'Raleway', sans-serif;
+            background: #fafafa;
+            resize: none;
+            margin-bottom: 0.2rem;
+            transition: border 0.2s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border: 1.5px solid #222;
+            outline: none;
+        }
+
+        .form-group select {
+            appearance: none;
+            background: #fafafa url('data:image/svg+xml;utf8,<svg fill="%23222" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 1rem center/1.2em;
+        }
+
+        .form-container button {
+            margin-top: 1rem;
+            padding: 0.8rem 0;
+            background: #222;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .form-container button:hover {
+            background: #ffd700;
+            color: #222;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: #fff;
+            border-radius: 14px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+            padding: 2.5rem 2rem 2rem 2rem;
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: modalIn 0.25s cubic-bezier(.4, 2, .6, 1) both;
+        }
+
+        @keyframes modalIn {
+            from {
+                transform: translateY(-40px) scale(0.95);
+                opacity: 0;
+            }
+
+            to {
+                transform: none;
+                opacity: 1;
+            }
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            color: #888;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #222;
+        }
+
+        .modal-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .modal-btn {
+            padding: 0.7rem 2.2rem;
+            border: none;
+            border-radius: 6px;
+            background: #222;
+            color: #fff;
+            font-size: 1.1rem;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+
+        .modal-btn:hover {
+            background: #ffd700;
+            color: #222;
+        }
+
+        #estimation-text {
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 1.2rem;
+        }
+
+        @media (max-width: 900px) {
+            .main-content {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .main-content {
+                padding: 0.5rem;
+                border-radius: 0;
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .form-container {
+                padding: 1.2rem 0.5rem;
+            }
+
+            .form-row {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .modal {
+                padding: 1.2rem 0.5rem 1rem 0.5rem;
+                max-width: 98vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GOMA</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#faitpar">Fait par</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="main-content">
+            <div class="form-container">
+                <h2>Contactez-nous</h2>
+                <form id="house-form" method="post" action="{% url 'predictiontest' %}">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sujet">Emplacement</label>
+                            <select name="emplacement" required>
+                                <option value="himbi 1">Himbi 1</option>
+                                <option value="murara">Murara</option>
+                                <option value="de volcan">De Volcan</option>
+                                <option value="virunga">Virunga</option>
+                                <option value="centre ville">Centre ville</option>
+                                <option value="ndosho">Mugunga</option>
+                                <option value="majengo">Majengo</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Chambres</label>
+                            <input type="number" id="prenom" name="chambres" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Salons</label>
+                            <input type="number" id="nom" name="salons" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="salle_de_bain">Salle de bain</label>
+                            <input type="number" id="salle_de_bain" name="salle_de_bain" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Age de la maison</label>
+                            <input type="number" id="nom" name="age_maison" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sujet">Cuisine</label>
+                            <select name="cuisine" required>
+                                <option value="interne">Interne</option>
+                                <option value="externe">Externe</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom">Parkings</label>
+                            <select name="parking" required>
+                                <option value="oui">Oui</option>
+                                <option value="non">Non</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Cloture</label>
+                            <select name="cloture" required>
+                                <option value="oui">Oui</option>
+                                <option value="non">Non</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sujet">Materiaux ?</label>
+                            <select name="materiaux" required>
+                                <option value="briques">Brique</option>
+                                <option value="bois">Bois</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Eletricite</label>
+                            <select name="electricite" required>
+                                <option value="oui">Oui</option>
+                                <option value="non">Non</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Eau ?</label>
+                            <select name="eau" required>
+                                <option value="oui">Oui</option>
+                                <option value="non">Non</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="sujet">Document ?</label>
+                            <select name="documents" required>
+                                <option value="1">Oui</option>
+                                <option value="0">Non</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Niveau ?</label>
+                            <select name="niveau" required>
+                                <option value="rez de chaussée">Rez-de-chaussée</option>
+                                <option value="étage">Étage</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ville">Positionnement ?</label>
+                            <select name="positionnement" required>
+                                <option value="en route principale">En route principale</option>
+                                <option value="pas en route principale">Pas en route principale</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <div id="modal-overlay" class="modal-overlay" style="display:none;">
+        <div class="modal">
+            <span class="modal-close" id="modal-close">&times;</span>
+            <h3>Estimation de prix :</h3>
+            <p id="estimation-text">Votre estimation personnalisée s'affichera ici.</p>
+            <p>Voulez-vous vendre votre maison ?</p>
+            <div class="modal-actions">
+                <button id="btn-oui" class="modal-btn">Oui</button>
+                <button id="btn-non" class="modal-btn">Non</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('house-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
+                },
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    let text = '';
+                    if (data.prix !== undefined) {
+                        text = '' + Number(data.prix).toFixed(2);
+                    } else if (data.error) {
+                        text = data.error;
+                    } else {
+                        text = 'Erreur lors de la prédiction.';
+                    }
+                    document.getElementById('estimation-text').textContent = text;
+                    document.getElementById('modal-overlay').style.display = 'flex';
+                })
+                .catch(error => {
+                    document.getElementById('estimation-text').textContent = 'Erreur lors de la prédiction.';
+                    document.getElementById('modal-overlay').style.display = 'flex';
+                });
+        });
+        // Fermer le modal avec la croix
+        document.getElementById('modal-close').onclick = function () {
+            document.getElementById('modal-overlay').style.display = 'none';
+        };
+        // Fermer le modal si on clique sur l'overlay
+        document.getElementById('modal-overlay').onclick = function (e) {
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        };
+    </script>
+</body>
+
+</html>
