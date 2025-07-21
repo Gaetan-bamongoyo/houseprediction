@@ -1,0 +1,137 @@
+{% extends 'structure.html' %}
+{% load static %}
+{% block content %}
+<div class="inner-page-banner">
+    <div class="banner-wrapper">
+        <div class="container-fluid">
+            <div class="banner-main-content-wrap">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-7 d-flex align-items-center">
+                        <div class="banner-content">
+                            <h1>Checkout Page</h1>
+                            <ul class="breadcrumb-list">
+                                <li><a href="index.html">Home</a></li>
+                                <li>Checkout </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Start Pricing check-out section -->
+<div class="pricing-checkout-page pt-100 mb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 p-0">
+                <div class="package-pricing-area">
+                    <div class="package-title">
+                        <h6>Resultat de la prédiction</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 p-0">
+                <div class="details-form">
+                    <div class="details-form-title">
+                        <h4>Les informations de votre maison</h4>
+                    </div>
+                    <form id="house-form" method="post" action="{% url 'predictiontest' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Emplacement*</label>
+                                    <select name="emplacement">
+                                        <option value="afia">Afia</option>
+                                        <option value="majengo">Majengo</option>
+                                        <option value="volcan">Volcan</option>
+                                        <option value="virunga">Virunga</option>
+                                        <option value="centre ville">Centre ville</option>
+                                        <option value="mugunga">Mugunga</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Cloture*</label>
+                                    <select name="cloture">
+                                        <option value="oui">Oui</option>
+                                        <option value="non">Non</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Parking*</label>
+                                    <select name="parking">
+                                        <option value="oui">Oui</option>
+                                        <option value="non">Non</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Niveau*</label>
+                                    <select name="niveau">
+                                        <option value="rez-de-chaussée">Rez-de-chaussée</option>
+                                        <option value="étage">Etage</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Age de la maison*</label>
+                                    <input type="number" name="age" placeholder="">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-30">
+                                <div class="form-inner">
+                                    <label>Nombre de chambre*</label>
+                                    <input type="number" name="chambre" placeholder="">
+                                </div>
+                            </div>
+                            <div class="post-property-btn">
+                                <button type="submit" class="primary-btn3">
+                                    Predire
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="resultat-prediction" style="margin-top:20px;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Pricing check-out section -->
+<script>
+    document.getElementById('house-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        fetch(form.action, {
+            method: 'POST',
+            headers: {
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': form.querySelector('[name=csrfmiddlewaretoken]').value
+            },
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.prix !== undefined) {
+                    document.getElementById('resultat-prediction').innerHTML = '<h4>Prix prédit : $ ' + Number(data.prix).toFixed(2) + '</h4>';
+                } else if (data.error) {
+                    document.getElementById('resultat-prediction').innerHTML = '<span style="color:red">' + data.error + '</span>';
+                } else {
+                    document.getElementById('resultat-prediction').innerHTML = '<span style="color:red">Erreur lors de la prédiction.</span>';
+                }
+            })
+            .catch(error => {
+                document.getElementById('resultat-prediction').innerHTML = '<span style="color:red">Erreur lors de la prédiction.</span>';
+            });
+    });
+</script>
+
+{% endblock %}

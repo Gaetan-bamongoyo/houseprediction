@@ -1,0 +1,97 @@
+Emplacement,Age,Chambre,Cloture,Parking,Niveau,Prix
+virunga,10,4,oui,oui,étage,150000
+volcan,25,3,oui,non,rez-de-chaussée,320000
+afia,12,2,non,non,rez-de-chaussée,120000
+centre ville,30,6,oui,oui,étage,400000
+majengo,8,3,oui,non,étage,140000
+mugunga,5,2,non,oui,rez-de-chaussée,110000
+virunga,18,4,oui,non,étage,160000
+volcan,22,5,non,oui,rez-de-chaussée,310000
+afia,15,3,oui,oui,étage,125000
+centre ville,28,4,non,non,rez-de-chaussée,410000
+majengo,20,3,oui,oui,étage,135000
+mugunga,3,1,non,non,rez-de-chaussée,100000
+virunga,14,5,oui,non,étage,150000
+volcan,35,6,non,oui,étage,330000
+afia,6,2,oui,non,rez-de-chaussée,120000
+centre ville,40,7,oui,oui,étage,420000
+majengo,9,3,oui,non,rez-de-chaussée,140000
+mugunga,17,4,non,oui,étage,110000
+virunga,11,5,oui,oui,étage,160000
+volcan,16,2,non,non,rez-de-chaussée,300000
+afia,7,4,oui,oui,étage,125000
+centre ville,23,3,oui,non,étage,390000
+majengo,2,1,non,oui,rez-de-chaussée,110000
+mugunga,13,2,oui,non,rez-de-chaussée,105000
+virunga,26,4,oui,oui,étage,150000
+volcan,31,3,non,non,rez-de-chaussée,340000
+afia,19,5,oui,non,étage,130000
+centre ville,4,2,non,oui,rez-de-chaussée,380000
+majengo,21,4,oui,oui,étage,145000
+mugunga,29,6,non,non,rez-de-chaussée,105000
+virunga,12,3,oui,oui,étage,150000
+volcan,14,2,oui,non,rez-de-chaussée,305000
+afia,33,4,non,oui,étage,135000
+centre ville,37,5,oui,oui,étage,415000
+majengo,6,3,non,non,rez-de-chaussée,120000
+mugunga,24,2,oui,non,étage,110000
+virunga,18,3,oui,oui,rez-de-chaussée,150000
+volcan,15,4,non,oui,étage,310000
+afia,8,5,oui,non,rez-de-chaussée,130000
+centre ville,20,4,oui,oui,étage,400000
+majengo,11,2,oui,non,rez-de-chaussée,120000
+mugunga,27,4,non,oui,étage,105000
+virunga,10,3,oui,non,étage,145000
+volcan,9,2,oui,oui,rez-de-chaussée,300000
+afia,22,5,non,non,étage,135000
+centre ville,16,3,oui,oui,rez-de-chaussée,385000
+majengo,5,2,non,oui,étage,120000
+mugunga,17,4,oui,non,étage,105000
+virunga,13,3,oui,oui,rez-de-chaussée,150000
+volcan,7,2,non,non,étage,300000
+afia,19,5,oui,oui,étage,130000
+centre ville,35,6,oui,non,rez-de-chaussée,410000
+majengo,28,4,oui,oui,étage,140000
+mugunga,21,3,non,non,rez-de-chaussée,105000
+virunga,14,4,oui,oui,étage,150000
+volcan,30,5,oui,non,étage,320000
+afia,32,3,non,oui,rez-de-chaussée,135000
+centre ville,25,2,oui,non,rez-de-chaussée,390000
+majengo,18,4,oui,oui,étage,135000
+mugunga,12,3,non,oui,rez-de-chaussée,105000
+virunga,7,4,oui,non,étage,145000
+volcan,9,3,oui,oui,rez-de-chaussée,310000
+afia,26,2,non,oui,étage,130000
+centre ville,19,4,oui,oui,étage,400000
+majengo,15,3,oui,non,rez-de-chaussée,130000
+mugunga,20,2,non,oui,étage,110000
+virunga,28,4,oui,oui,étage,150000
+volcan,11,3,non,non,rez-de-chaussée,300000
+afia,24,5,oui,non,étage,135000
+centre ville,17,3,oui,oui,rez-de-chaussée,380000
+majengo,10,2,oui,non,étage,120000
+mugunga,5,1,non,oui,rez-de-chaussée,100000
+virunga,12,4,oui,oui,étage,150000
+volcan,6,3,non,non,rez-de-chaussée,305000
+afia,15,2,oui,non,étage,130000
+centre ville,22,4,oui,oui,étage,400000
+majengo,20,3,non,non,rez-de-chaussée,130000
+mugunga,14,4,oui,oui,étage,110000
+virunga,3,2,non,oui,rez-de-chaussée,100000
+volcan,17,3,oui,non,étage,310000
+afia,8,1,oui,oui,étage,120000
+centre ville,5,2,non,non,rez-de-chaussée,390000
+majengo,6,4,oui,non,étage,120000
+mugunga,9,3,non,oui,étage,110000
+virunga,7,4,oui,non,étage,150000
+volcan,12,5,non,oui,rez-de-chaussée,320000
+afia,19,3,oui,oui,étage,130000
+centre ville,10,4,non,non,étage,395000
+majengo,11,3,oui,oui,rez-de-chaussée,125000
+mugunga,15,2,oui,non,étage,110000
+virunga,23,4,oui,oui,étage,155000
+volcan,30,3,non,oui,rez-de-chaussée,335000
+afia,13,2,oui,non,étage,130000
+centre ville,8,4,oui,oui,rez-de-chaussée,400000
+majengo,12,3,non,oui,étage,130000
+mugunga,14,4,oui,oui,rez-de-chaussée,110000
