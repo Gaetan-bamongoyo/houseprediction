@@ -11,6 +11,9 @@ from django.http import JsonResponse
 def indexPage(request):
     return render(request, 'index.html')
 
+def membrePage(request):
+    return render(request, 'membre.html')
+
 def predictionPage(request):
     return render(request, 'prediction.html')
 

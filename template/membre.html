@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membres du Groupe</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="assets/css/membres.css"> -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Raleway', sans-serif;
+            background: #f5f5f5;
+        }
+
+        header {
+            background: url('../../GOMA2.webp') center/cover no-repeat;
+            color: #fff;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 3rem;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links li a:hover {
+            color: #ffd700;
+        }
+
+        .membres-section {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 2rem 1rem;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .membres-section h1 {
+            text-align: center;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            color: #222;
+        }
+
+        .membres-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2.5rem;
+            justify-items: center;
+        }
+
+        .membre-card {
+            background: #fafafa;
+            border-radius: 14px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+            padding: 2rem 1.2rem 1.5rem 1.2rem;
+            text-align: center;
+            width: 100%;
+            max-width: 320px;
+            transition: transform 0.18s, box-shadow 0.18s;
+        }
+
+        .membre-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.13);
+        }
+
+        .membre-card img {
+            width: 110px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 1.1rem;
+            border: 3px solid #ffd700;
+            background: #eee;
+        }
+
+        .membre-card h2 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0.5rem 0 0.2rem 0;
+            color: #1a1a1a;
+        }
+
+        .membre-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #666;
+            margin: 0 0 0.7rem 0;
+        }
+
+        .membre-card p {
+            font-size: 1rem;
+            color: #333;
+            margin: 0;
+        }
+
+        @media (max-width: 700px) {
+            .navbar {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .membres-section {
+                padding: 1rem 0.2rem;
+                border-radius: 0;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">GOMA</div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Fait par</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="membres-section">
+            <h1>Les membres du groupe</h1>
+            <div class="membres-list">
+                <div class="membre-card">
+                    <!-- <img src="assets/images/avatar1.png" alt="Photo membre 1"> -->
+                    <h2>ABIO BAMONGOYO GAETAN</h2>
+                    <h3>Etudiant M2P MIAGE/IMSI</h3>
+                    <!-- <p>Petite description du membre, ses compétences ou sa contribution au projet.</p> -->
+                </div>
+                <div class="membre-card">
+                    <!-- <img src="assets/images/avatar2.png" alt="Photo membre 2"> -->
+                    <h2>KITUMAINI BYALAHIRE VIANNEY</h2>
+                    <h3>Etudiant M2P MIAGE/IMSI</h3>
+                    <!-- <p>Petite description du membre, ses compétences ou sa contribution au projet.</p> -->
+                </div>
+                <div class="membre-card">
+                    <h2>LUCIEN AMISI</h2>
+                    <h3>Etudiant M2P MIAGE/IMSI</h3>
+                    <!-- <p>Petite description du membre, ses compétences ou sa contribution au projet.</p> -->
+                </div>
+                <div class="membre-card">
+                    <h2>SADI MUTELESI</h2>
+                    <h3>Etudiant M2P MIAGE/IMSI</h3>
+                    <!-- <p>Petite description du membre, ses compétences ou sa contribution au projet.</p> -->
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
